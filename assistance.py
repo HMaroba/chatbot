@@ -17,6 +17,10 @@ def get_response(user_input):
         aidsresponses = ["HIV and AIDS are here be aware please"]
         return random.choice(aidsresponses)
     
+    match = re.search(r'prevention of AIDS|how to prevent HIV', user_input)
+    if match:
+        return "Preventing HIV/AIDS involves a combination of strategies, including practicing safe sex by using condoms consistently and correctly, limiting your number of sexual partners, and avoiding sharing needles or syringes. Additionally, getting tested for HIV regularly and seeking medical care if you are diagnosed with HIV can help prevent the spread of the virus. Education and awareness about HIV/AIDS are also important in reducing stigma and promoting healthy behaviors."
+    
     match = re.search(r'symptoms of AIDS|symptoms of HIV', user_input)
     if match:
         return "Common symptoms of AIDS include persistent fever, swollen lymph nodes, rapid weight loss, frequent diarrhea, night sweats, and skin rashes. However, it's important to note that not everyone with HIV will develop AIDS, and symptoms can vary widely from person to person. Early detection and treatment are crucial for managing HIV and preventing the progression to AIDS."
